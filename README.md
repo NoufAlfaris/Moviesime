@@ -4,7 +4,7 @@ With Moviesime, you can find full details of hundreds of movies and reviews from
 
 
 # **Features**
-• **Browse movies 🎥 **: users can view all movies, categorized by rating, and genre. Besides Viewing all movie's details including rating, storyline, languages, and more. Additionally, they can save their favorite movies!
+• **Browse movies 🎥**: users can view all movies, categorized by rating, and genre. Besides Viewing all movie's details including rating, storyline, languages, and more. Additionally, they can save their favorite movies!
 
 • **Write and submit Reviews ✏️**: users can view like-minded people reviews to the movie, plus adding their own review and rating!
 
