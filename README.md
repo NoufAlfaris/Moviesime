@@ -14,5 +14,7 @@ With Moviesime, you can find full details of hundreds of movies and reviews from
 
 # **Tech used**
 • **API Integration**: The app fetches movie details, reviews, actors, directors, and users data from a custome built API.
+
 • **HTTP Methods**: Uses `GET`, `POST`, and `PUT` requests to interact with data.
+
 • **MVVM**: Built using SwiftUI with an MVVM architecture for clean code structure. 
