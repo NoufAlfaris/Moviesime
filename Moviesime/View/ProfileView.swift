@@ -108,6 +108,6 @@ struct ProfileView: View {
         
     }
 }
-//#Preview{
-//    ProfileView( )
-//}
+#Preview{
+    ProfileView(user: User(profile_image: "", email: "", name: "nn", password: ""))
+}

@@ -16,7 +16,6 @@ struct SignInView: View {
     @State var showAlert :Bool = false
     @Environment(\.dismiss) var dismiss
     @State var isLoggedIn: Bool = false
-    @State var user: User? = nil
     @StateObject var vm = userViewModel( )
     enum field{
         case username, password
@@ -153,8 +152,19 @@ struct SignInView: View {
                             .padding(.horizontal, 4)
                 }
                 .disabled(username.isEmpty || password.isEmpty)
-                .fullScreenCover(isPresented: $isLoggedIn) {
-                    MoviesCenterView(user: user ?? User(profile_image: "No Image", email: "", name: "anonymous", password: ""))
+//                .fullScreenCover(isPresented: $isLoggedIn) {
+//                    if let user = self.user {
+//                        MoviesCenterView(user: user)
+//                    }
+//                   
+//                }
+                .fullScreenCover(item: self.$vm.user) { user in
+                    if let user = self.vm.user {
+                        MoviesCenterView(user: user)
+                    }
+                    else{
+                        Text("No user")
+                    }
                 }
                 
                 
@@ -171,8 +181,8 @@ struct SignInView: View {
         if let userRecord = vm.validUser(email: email, password: password){
             print(userRecord)
             print("valid")
-            self.user = userRecord.fields
-            print(self.user)
+            vm.user = userRecord.fields
+            print(vm.user)
             isLoggedIn = true
 //            user = userRecord.fields
 //            MoviesCenterView(user: userRecord.fields)

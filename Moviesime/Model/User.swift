@@ -7,9 +7,10 @@
 
 import Foundation
 
-struct User: Codable {
+struct User: Codable , Identifiable{
     let profile_image: String
     let email: String
     let name: String
     let password: String
+    var id: UUID { UUID()}
 }

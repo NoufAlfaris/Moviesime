@@ -12,7 +12,8 @@ final class userViewModel: ObservableObject {
     @Published var hasError: Bool = false
     @Published var error: UserError?
     @Published var users: [UserRecord] = []
-    
+    @Published var user: User? = nil
+
     init(){
         self.fetchUsers()
     }
